@@ -2,13 +2,19 @@
     "compilerOptions": {
         "target": "ESNext",
         "module": "commonjs",
-        "lib": ["DOM", "ESNext"],
+        "lib": [
+            "DOM",
+            "ESNext"
+        ],
         "allowJs": true,
         "moduleResolution": "node",
         "outDir": "./dist",
         "rootDir": "./src",
         "removeComments": true,
-        "typeRoots": ["./node_modules/@types", "./src/@types"],
+        "typeRoots": [
+            "./node_modules/@types",
+            "./src/@types"
+        ],
         "esModuleInterop": true,
         "resolveJsonModule": true,
         "experimentalDecorators": true,
@@ -19,17 +25,15 @@
         "declaration": true,
         "isolatedModules": true,
         "paths": {
-            "controllers/*": [ "./src/controllers/*" ],
-            "utils/*": [ "./src/utils/*" ],
-            "components/*": [ "./src/components/*" ],
-            "types/*": [ "./src/types/*" ],
-            "middlewares/*": [ "./src/middlewares/*" ],
-            "models/*": [ "./src/models/*" ],
-            "routes/*": [ "./src/routes/*" ],
-            "services/*": [ "./src/services/*" ],
-            "validations/*": [ "./src/validations/*" ]
+            "domain/*": [
+                "./src/app/domain/*"
+            ],
+            "infrastructure/*": [
+                "./src/app/infrastructure/*"
+            ],
         }
     },
-
-    "include": [ "./src" ]
+    "include": [
+        "./src"
+    ]
 }
