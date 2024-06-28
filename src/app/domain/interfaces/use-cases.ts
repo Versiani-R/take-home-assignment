@@ -5,5 +5,8 @@ interface UseCase {
 interface HandleQuote extends UseCase {
     execute: (body: string) => Promise<string>
 }
+interface GetQuotes extends UseCase {
+    execute: () => Promise<unknown[]>
+}
 
-export type { HandleQuote }
+export type { HandleQuote, GetQuotes }

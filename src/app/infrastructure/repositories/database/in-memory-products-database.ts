@@ -1,6 +1,16 @@
 import Database from "domain/interfaces/database";
 
-export default class InMemoryDatabase implements Database {
+let instance: InMemoryProductsDatabase
+export default class InMemoryProductsDatabase implements Database {
+
+    static getInstance = () => {
+        if (!instance) {
+            instance = new InMemoryProductsDatabase()
+        }
+
+        return instance
+    }
+
     private readonly data = {
         'x001-001-001': {
             amountInStore: 50,
