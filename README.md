@@ -67,7 +67,7 @@ src/
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/your-repo/rfq-processing-system.git
+    git clone https://github.com/Versiani-R/take-home-assignment rfq-processing-system
     cd rfq-processing-system
     ```
 
@@ -89,15 +89,15 @@ src/
 
 1. Start the server:
     ```sh
-    npm start
+    npm run dev
     ```
 
-2. The application will be accessible at `http://localhost:3000`.
+2. The application will be accessible at `http://localhost:8080`.
 
 ### Usage
 
 - **Process an RFQ email**:
-  Send a POST request to `http://localhost:3000/quote` with the email content in the request body:
+  Send a POST request to `http://localhost:8080/v1/quote` with the email content in the request body as a raw json format:
   ```json
   {
     "body": "Hi, I'm customer #001 Renato Versiani. I want a quote for the product y000-000-001, I want 5 liters. I'm also interested in the product z000-000-001, can you fold the 5m sheets into 2.5m ? Because my truck bed would not fit 5 meters"
@@ -105,7 +105,7 @@ src/
   ```
 
 - **Retrieve all quotes**:
-  Send a GET request to `http://localhost:3000/quotes`.
+  Send a GET request to `http://localhost:8080/v1/quotes`.
 
 ## Engineering Specification
 
