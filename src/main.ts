@@ -11,14 +11,14 @@ app.use(express.json());
 app.use(express.urlencoded({
     extended: false
 }));
-// app.use(
-//     rateLimit({
-//         windowMs: 12 * 60 * 60 * 1000, // 12 hour duration in milliseconds
-//         max: 100,
-//         message: 'You exceeded 100 requests in a 12 hour limit!',
-//         headers: true
-//     })
-// );
+app.use(
+    rateLimit({
+        windowMs: 12 * 60 * 60 * 1000, // 12 hour duration in milliseconds
+        max: 100,
+        message: 'You exceeded 100 requests in a 12 hour limit!',
+        headers: true
+    })
+);
 (async () => {
     try {
         // await database.connect();
